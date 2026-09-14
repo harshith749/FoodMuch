@@ -15,6 +15,8 @@ router.get('/uploads/:imageName',(req,res)=>{
 })
 
 router.delete("/delete-product/:productId",productController.deleteById)
+
+
 router.get("/test", (req, res) => {
     res.status(200).json({msg:"test route"})
 });

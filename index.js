@@ -6,6 +6,9 @@ const mongoose = require("mongoose");
 const vendorRoutes = require("./routes/vendorRoutes");
 const firmRoutes = require("./routes/firmRoutes");
 const productRoute=require("./routes/productRoute");
+const cors = require("cors");
+
+app.use(cors());
 
 
 const path=require("path");
@@ -41,4 +44,6 @@ app.listen(PORT, () => {
 app.use('/' , (req, res) => {
   res.send("Welcome to the home page");
 });
+
+
 
